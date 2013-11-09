@@ -7,7 +7,7 @@ console.log(
   findMaxCrossingSubarray(a,l,m,h)
 );
 // returns indexes into the array
-function findMaxCrossingSubarray (A,low,mid,high) { console.log('findMaxCrossingSubarray(A[%s],low=%s,mid=%s,high=%s)',A,low,mid,high)
+function findMaxCrossingSubarray (A,low,mid,high) {
   var leftSum = negativeInfinity;
   var sum = 0;
   var maxLeft = null;

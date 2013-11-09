@@ -1,6 +1,11 @@
-var a = [0,16,4,10,14,7,9,3,2,8,1];
-maxHeapify(a,2);
+var a = [4,1,3,2,16,9,10,14,8,7]
+buildMaxHeap(a);
 console.log(a);
+function buildMaxHeap (A) {
+  for (var i = Math.floor((A.length - 1) / 2); i >= 0; --i) {
+    maxHeapify(A,i);
+  }
+}
 function parent (i) {
   return Math.floor(i / 2);
 }
@@ -19,8 +24,8 @@ function swap (A,i,largest) {
 }
 function maxHeapify (A,i) {
   console.log('maxHeapify(A[%s],%s)',A,i)
-  var l = left(i);
-  var r = right(i);
+  var l = left(i) + 1;
+  var r = right(i) + 1;
   var largest = 0;
   console.log(' - (if0) l=%s,r=%s,largest=%s,i=%s',l,r,largest,i)
   if ((l <= (A.length - 1)) && (A[l] > A[i])) {

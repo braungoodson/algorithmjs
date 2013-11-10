@@ -4,6 +4,6 @@ unit-test:
 
 test:
 
-	make test
+	make unit-test
 
 .PHONY: test

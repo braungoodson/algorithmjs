@@ -13,6 +13,7 @@ var a = new heap([4,1,3,2,16,9,10,14,8,7]);
 buildMaxHeap(a());
 console.log(a());
 function buildMaxHeap (A) {
+  A.heapSize = A.length;
   for (var i = Math.floor((A.length - 1) / 2); i >= 0; --i) {
     maxHeapify(A,i);
   }
@@ -39,13 +40,13 @@ function maxHeapify (A,i) {
   var r = right(i) + 1;
   var largest = 0;
   console.log(' > (if0) l=%s,r=%s,largest=%s,i=%s',l,r,largest,i)
-  if ((l <= (A.length - 1)) && (A[l] > A[i])) {
+  if ((l <= (A.heapSize - 1)) && (A[l] > A[i])) {
     largest = l;
   } else {
     largest = i;
   }
   console.log(' > l=%s,r=%s,largest=%s,i=%s',l,r,largest,i)
-  if ((r <= (A.length - 1)) && (A[r] > A[largest])) {
+  if ((r <= (A.heapSize - 1)) && (A[r] > A[largest])) {
     largest = r;
     console.log(' > (if1) l=%s,r=%s,largest=%s,i=%s',l,r,largest,i)
   }

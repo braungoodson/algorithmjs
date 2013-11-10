@@ -3,12 +3,13 @@ function heap (A) {
     var a = A;
     a.length = A.length;
     a.heapSize = 0;
+    a.origin = A;
     return a;
   }
 }
 var a = new heap([4,1,3,2,16,9,10,14,8,7]);
 buildMaxHeap(a());
-console.log(a());
+console.log(a().origin())
 function buildMaxHeap (A) {
   for (var i = Math.floor((A.length - 1) / 2); i >= 0; --i) {
     maxHeapify(A,i);

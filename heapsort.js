@@ -1,5 +1,3 @@
-var a = new heap([4,1,3,2,16,9,10,14,8,7]);
-heapSort(a());
 function heapSort (A) {
   buildMaxHeap(A);
   for (var i = (A.length - 1); i >= 1; --i) {

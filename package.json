@@ -1,0 +1,26 @@
+{
+  "name": "algorithmjs",
+  "version": "0.0.1",
+  "description": "algorithmjs ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/braungoodson/algorithmjs"
+  },
+  "keywords": [
+    "tdd",
+    "algorithms",
+    "insertion-sort",
+    "heapsort",
+    "find-max-corssing-subarray",
+    "merge-sort"
+  ],
+  "author": "Braun Goodson",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/braungoodson/algorithmjs/issues"
+  }
+}

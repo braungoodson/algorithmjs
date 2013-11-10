@@ -1,7 +1,3 @@
-var infinity = 65000;
-var a = [5,2,4,7,1,3,2,6];
-mergeSort(a,0,a.length - 1);
-console.log(a);
 function mergeSort (A,p,r) {
   if (p < r) {
     var q = Math.floor((p + r) / 2);

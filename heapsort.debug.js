@@ -1,18 +1,25 @@
+var a = new heap([4,1,3,2,16,9,10,14,8,7]);
+heapSort(a());
+console.log(a());
+function heapSort (A) {
+  console.log('heapSort(A[%s])',A)
+  buildMaxHeap(A);
+  for (var i = (A.length - 1); i >= 1; --i) {
+    swap(A,0,i);
+    A.heapSize = A.heapSize - 1;
+    maxHeapify(A,0);
+  }
+}
 function heap (A) {
   return function () {
     var a = A;
-    a.origin = function () {
-      return A;
-    }
     a.length = A.length;
     a.heapSize = 0;
     return a;
   }
 }
-var a = new heap([4,1,3,2,16,9,10,14,8,7]);
-buildMaxHeap(a());
-console.log(a());
 function buildMaxHeap (A) {
+  console.log('buildMaxHeap(A[%s])',A)
   A.heapSize = A.length;
   for (var i = Math.floor((A.length - 1) / 2); i >= 0; --i) {
     maxHeapify(A,i);
